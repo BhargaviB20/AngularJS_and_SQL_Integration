@@ -9,12 +9,12 @@ app.use(express.json());
 
 // 🔸 Oracle connection settings
 const dbConfig = {
-  user: "system",             // your Oracle username
-  password: "sqldbms",        // <-- change if needed
-  connectString: "localhost:1521/XE" // or your service name
+  user: "system",             
+  password: "sqldbms",
+  connectString: "localhost:1521/XE" 
 };
 
-// === Serve static files from project root (where index.html is)
+
 app.use(express.static(path.join(__dirname)));
 
 // --- API routes ---
@@ -99,3 +99,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
   console.log(`✅ Oracle backend + frontend running at http://localhost:${PORT}`)
 );
+
